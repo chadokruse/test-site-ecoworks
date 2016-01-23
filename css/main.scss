@@ -6,37 +6,55 @@
 /*********************************************************************************/
 /* Variables                                                                     */
 /*********************************************************************************/
-$on-palm:          600px;
-$on-laptop:        800px;
+
+// Media query breakpoints
+// Extra small screen / phone
+$screen-xs:                  480px !default;
+$screen-xs-min:              $screen-xs !default;
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
 
 /*********************************************************************************/
 /* Mixins                                                                        */
 /*********************************************************************************/
+
 // Use media queries like this:
-// @include media-query($on-palm) {
+// @include media-query($screen-xs-min) {
 //     .wrapper {
 //         padding-right: $spacing-unit / 2;
 //         padding-left: $spacing-unit / 2;
 //     }
 // }
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 /*********************************************************************************/
 /* Partials                                                                      */
 /*********************************************************************************/
-// Import partials from `sass_dir` (defaults to `_sass`)
-/*
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
-*/
 
+// Import partials from `sass_dir` (defaults to `_sass`)
 @import 'skel/vars';
 @import 'skel/functions';
 @import 'skel/mixins';
@@ -86,6 +104,9 @@ $on-laptop:        800px;
 
 /* Basic */
 
+  html {
+    font-size: 18px;
+  }
   body {
     background: _palette(bg);
 
@@ -100,7 +121,7 @@ $on-laptop:        800px;
   body, input, select, textarea {
     color: _palette(fg);
     font-family: _font(family);
-    font-size: 16pt;
+    font-size: 1em;
     font-weight: _font(weight);
     line-height: 1.75em;
   }
@@ -1221,7 +1242,7 @@ $on-laptop:        800px;
     /* Basic */
 
       body, input, select, textarea {
-        font-size: 12pt;
+        font-size: 1em;
       }
 
   }
@@ -1536,3 +1557,40 @@ $on-laptop:        800px;
 /*********************************************************************************/
 /* Site CSS                                                                      */
 /*********************************************************************************/
+#header, #footer {
+  font-size: .9rem;
+}
+
+#header {
+  a {
+    border: none;
+  }
+  img {
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  nav {
+    margin-top: 30px;
+    ul {
+      list-style-type: none;
+    }
+    a {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}
+
+.thumb-fit {
+  //object-fit: cover;
+  max-width: 150px;
+  max-height: 100px;
+}
+
+.popup {
+  padding: 25px;
+  text-align: left;
+}
+
+.poptrox-popup .caption {
+  background-color: #e9e9e9;
+}

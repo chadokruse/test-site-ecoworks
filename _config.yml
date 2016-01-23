@@ -1,14 +1,21 @@
+# Grantmaker settings
+foundation_name: Ecoworks Foundation
+tagline: Economic prosperity while replenishing the environment for future generations
+email_public: info@ecoworksfoundation.org
+
+# Social Media
+# Enter the full profile url (e.g. https://twitter.com/smartergiving)
+twitter: 
+facebook: 
+instagram: 
+github: 
+
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+title: Ecoworks Foundation | Venture Philanthropy for Sustainable Development
+description: > # this means to start on the next line (which needs to be indendted two spaces)"
+  Ecoworks Foundation is a 'venture philanthropy' foundation committed to enabling economic systems, products or services that promote economic growth while replenishing the environment for future generations.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+url: "http://www.ecoworksfoundation.org" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
