@@ -19,3 +19,5 @@ url: "http://www.ecoworksfoundation.org" # the base hostname & protocol for your
 
 # Build settings
 markdown: kramdown
+exclude:
+  - README.md
